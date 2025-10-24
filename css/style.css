@@ -1,4 +1,4 @@
-/* === EL DÚO PERFECTO | ESTILO PREMIUM (Fondo Global + Header Transparente) === */
+/* === EL DÚO PERFECTO | ESTILO PREMIUM (Fondo Global + Header 100% Transparente) === */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
 
@@ -17,14 +17,14 @@ body {
   margin: 0;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
-    url("../imagenes/hero.png") center/120% no-repeat fixed;
-  /* 👆 aumentamos al 120% para alejar la hamburguesa sin mostrar bordes */
+    url("../imagenes/hero.png") center/105% no-repeat fixed;
+  /* 👆 ahora la hamburguesa está un poquito más atrás sin mostrar bordes */
   color: var(--texto);
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* === HEADER TOTALMENTE TRANSPARENTE === */
+/* === HEADER TRANSPARENTE TOTAL === */
 .header {
   position: fixed;
   top: 0;
@@ -35,11 +35,9 @@ body {
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  /* 👆 totalmente transparente */
-  backdrop-filter: blur(0px);
   box-shadow: none;
   z-index: 999;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header-left {
@@ -82,7 +80,7 @@ body {
 /* === HERO PRINCIPAL === */
 .hero {
   position: relative;
-  background: none; /* Se usa el fondo global */
+  background: none; /* usa el fondo global */
   height: 95vh;
   display: flex;
   align-items: center;
