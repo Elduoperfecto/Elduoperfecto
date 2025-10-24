@@ -1,7 +1,7 @@
 [
-  {"nombre": "Doble Sabor", "precio": 12.99, "imagen": "imagenes/hamburguesa1.jpg"},
-  {"nombre": "Clásica", "precio": 10.99, "imagen": "imagenes/hamburguesa2.jpg"},
-  {"nombre": "BBQ Deluxe", "precio": 13.99, "imagen": "imagenes/hamburguesa3.jpg"},
-  {"nombre": "Cheddar Boom", "precio": 11.99, "imagen": "imagenes/hamburguesa4.jpg"},
-  {"nombre": "Veggie Crunch", "precio": 10.49, "imagen": "imagenes/hamburguesa5.jpg"}
+  {"nombre": "Doble Sabor", "precio": 12.99, "imagenes": "imagenes/hamburguesa1.jpg"},
+  {"nombre": "Clásica", "precio": 10.99, "imagenes": "imagenes/hamburguesa2.jpg"},
+  {"nombre": "BBQ Deluxe", "precio": 13.99, "imagenes": "imagenes/hamburguesa3.jpg"},
+  {"nombre": "Cheddar Boom", "precio": 11.99, "imagenes": "imagenes/hamburguesa4.jpg"},
+  {"nombre": "Veggie Crunch", "precio": 10.49, "imagenes": "imagenes/hamburguesa5.jpg"}
 ]
