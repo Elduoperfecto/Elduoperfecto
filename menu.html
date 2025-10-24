@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú | El Dúo Perfecto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html" class="active">Menú</a>
+      <a href="promos.html">Promos</a>
+      <a href="pedido.html">Pedido</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+  <main class="menu">
+    <h1>Nuestro Menú</h1>
+    <div id="menuContainer" class="menu-grid"></div>
+  </main>
+  <script>
+    fetch('data/productos.json')
+      .then(res => res.json())
+      .then(data => {
+        const cont = document.getElementById('menuContainer');
+        data.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'menu-item';
+          card.innerHTML = `
+            <img src="${p.imagen}" alt="${p.nombre}">
+            <h3>${p.nombre}</h3>
+            <p>$${p.precio.toFixed(2)}</p>
+            <button onclick="agregarAlPedido('${p.nombre}', ${p.precio})">Agregar</button>
+          `;
+          cont.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>

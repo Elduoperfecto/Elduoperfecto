@@ -1,0 +1,7 @@
+[
+  {"nombre": "Doble Sabor", "precio": 12.99, "imagen": "images/burger1.jpg"},
+  {"nombre": "Clásica", "precio": 10.99, "imagen": "images/burger2.jpg"},
+  {"nombre": "BBQ Deluxe", "precio": 13.99, "imagen": "images/burger3.jpg"},
+  {"nombre": "Cheddar Boom", "precio": 11.99, "imagen": "images/burger4.jpg"},
+  {"nombre": "Veggie Crunch", "precio": 10.49, "imagen": "images/burger5.jpg"}
+]

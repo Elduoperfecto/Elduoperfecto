@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido | El Dúo Perfecto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/pedido.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="promos.html">Promos</a>
+      <a href="pedido.html" class="active">Pedido</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="pedido">
+    <h1>Tu Pedido</h1>
+    <div id="carrito"></div>
+
+    <div class="opciones-envio">
+      <label><input type="radio" name="tipo" value="retiro" checked> Retiro en local</label>
+      <label><input type="radio" name="tipo" value="envio"> Envío a domicilio</label>
+    </div>
+
+    <div id="formEnvio" style="display:none;">
+      <input id="nombre" placeholder="Nombre completo">
+      <input id="direccion" placeholder="Dirección de entrega">
+      <select id="metodo">
+        <option value="Efectivo">Efectivo</option>
+        <option value="Transferencia">Transferencia</option>
+      </select>
+      <textarea id="observaciones" placeholder="Observaciones"></textarea>
+    </div>
+
+    <button id="btnEnviar">Enviar pedido por WhatsApp</button>
+  </main>
+</body>
+</html>

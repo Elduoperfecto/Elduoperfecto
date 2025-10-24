@@ -1,0 +1,197 @@
+/* === EL DÚO PERFECTO | ESTILO PREMIUM === */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --marron: #2b1d14;
+  --dorado: #f0c75e;
+  --crema: #f9f3e9;
+  --rojo: #a32a16;
+  --rojo-hover: #8a220f;
+  --texto: #fffaf0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: var(--marron);
+  color: var(--texto);
+}
+
+/* === HEADER === */
+.header {
+  background-color: var(--marron);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid var(--dorado);
+  box-shadow: 0 0 20px rgba(240, 199, 94, 0.5);
+}
+
+.nav a {
+  color: var(--texto);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--dorado);
+  border-bottom: 2px solid var(--dorado);
+  padding-bottom: 4px;
+}
+
+/* === HERO === */
+.hero {
+  background: url("../images/hero.jpg") center/cover no-repeat;
+  text-align: left;
+  color: #fff;
+  padding: 10rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  color: var(--texto);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #f3e8d7;
+  max-width: 600px;
+}
+
+.btn {
+  background-color: var(--rojo);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5rem;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  background-color: var(--rojo-hover);
+  transform: scale(1.05);
+}
+
+/* === SECCIONES === */
+main {
+  background-color: var(--crema);
+  color: #2b1d14;
+  padding: 3rem 2rem;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--marron);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: 0.3s;
+  padding: 1rem;
+}
+
+.menu-item:hover {
+  transform: scale(1.03);
+}
+
+.menu-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  color: var(--marron);
+  margin-top: 0.8rem;
+}
+
+.menu-item p {
+  color: #5a4a3f;
+}
+
+.menu-item button {
+  background-color: var(--rojo);
+  border: none;
+  color: #fff;
+  padding: 0.7rem 1.3rem;
+  border-radius: 30px;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.menu-item button:hover {
+  background-color: var(--rojo-hover);
+}
+
+/* === PEDIDO === */
+.pedido {
+  background-color: var(--crema);
+  padding: 2rem;
+  color: var(--marron);
+}
+
+#btnEnviar {
+  background-color: var(--rojo);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnEnviar:hover {
+  background-color: var(--rojo-hover);
+  transform: scale(1.05);
+}
+
+/* === CONTACTO === */
+.contacto {
+  background-color: var(--crema);
+  color: var(--marron);
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.contacto a {
+  color: var(--rojo);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contacto a:hover {
+  color: var(--rojo-hover);
+}
