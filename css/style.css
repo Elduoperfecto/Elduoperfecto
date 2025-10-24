@@ -20,17 +20,25 @@ body {
   scroll-behavior: smooth;
 }
 
-/* === HEADER === */
+/* === HEADER (ajustado con degradado transparente) === */
 .header {
-  background-color: var(--marron);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 2rem;
+  background: linear-gradient(
+    rgba(43, 29, 20, 0.9) 0%,
+    rgba(43, 29, 20, 0.7) 50%,
+    rgba(43, 29, 20, 0) 100%
+  );
+  backdrop-filter: blur(4px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-  position: sticky;
-  top: 0;
   z-index: 999;
+  transition: background 0.3s ease;
 }
 
 .header-left {
@@ -248,10 +256,3 @@ h1, h2, h3 {
   font-size: 0.9rem;
   border-top: 1px solid rgba(240, 199, 94, 0.3);
 }
-
-
-
-
-
-
-
