@@ -17,7 +17,7 @@ body {
   margin: 0;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
-    url("../imagenes/hero.png") center/98% no-repeat fixed;
+    url("../imagenes/hero.png") center/100% no-repeat fixed;
   /* 👆 ahora la hamburguesa está un poquito más atrás sin mostrar bordes */
   color: var(--texto);
   scroll-behavior: smooth;
@@ -278,6 +278,7 @@ main p {
   font-size: 0.9rem;
   border-top: 1px solid rgba(240, 199, 94, 0.3);
 }
+
 
 
 
