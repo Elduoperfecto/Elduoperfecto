@@ -17,7 +17,7 @@ body {
   margin: 0;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
-    url("../imagenes/hero.png") center/95% no-repeat fixed;
+    url("../imagenes/hero.png") center/100% no-repeat fixed;
   color: var(--texto);
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -327,3 +327,4 @@ main p {
     font-size: 0.95rem;
   }
 }
+
