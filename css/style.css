@@ -75,7 +75,7 @@ body {
   position: relative;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../images/hero.jpg") center/cover no-repeat;
+    url("../images/hero.png") center/cover no-repeat;
   height: 90vh;
   display: flex;
   align-items: center;
