@@ -75,17 +75,17 @@ body {
   position: relative;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../imagenes/hero.png") center/contain no-repeat;
-  background-position: center top;
-  background-attachment: scroll;
-  background-color: #1e120c; /* por si la imagen no cubre toda la pantalla */
-  height: 95vh;
+    url("../imagenes/hero.png") center/110% no-repeat;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 4rem;
   color: #fff;
+  background-attachment: fixed;
+  background-position: center 40%;
 }
+
 
 
 .hero-content {
@@ -250,6 +250,7 @@ h1, h2, h3 {
   font-size: 0.9rem;
   border-top: 1px solid rgba(240, 199, 94, 0.3);
 }
+
 
 
 
