@@ -75,7 +75,8 @@ body {
   position: relative;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../imagenes/hero.png") center/110% no-repeat;
+    url("../images/hero.png") center/105% no-repeat;
+  background-position: center 38%;
   height: 90vh;
   display: flex;
   align-items: center;
@@ -83,10 +84,7 @@ body {
   padding: 0 4rem;
   color: #fff;
   background-attachment: fixed;
-  background-position: center 40%;
 }
-
-
 
 .hero-content {
   max-width: 600px;
@@ -250,6 +248,7 @@ h1, h2, h3 {
   font-size: 0.9rem;
   border-top: 1px solid rgba(240, 199, 94, 0.3);
 }
+
 
 
 
