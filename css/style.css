@@ -1,4 +1,4 @@
-/* === EL DÚO PERFECTO | ESTILO PREMIUM (Totalmente Transparente y con Fondo Global) === */
+/* === EL DÚO PERFECTO | ESTILO PREMIUM (Fondo Global + Header Transparente) === */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
 
@@ -16,14 +16,15 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    url("../imagenes/hero.png") center/cover no-repeat fixed;
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
+    url("../imagenes/hero.png") center/120% no-repeat fixed;
+  /* 👆 aumentamos al 120% para alejar la hamburguesa sin mostrar bordes */
   color: var(--texto);
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-/* === HEADER TRANSPARENTE GLOBAL === */
+/* === HEADER TOTALMENTE TRANSPARENTE === */
 .header {
   position: fixed;
   top: 0;
@@ -33,15 +34,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(
-    rgba(43, 29, 20, 0.9) 0%,
-    rgba(43, 29, 20, 0.6) 50%,
-    rgba(43, 29, 20, 0) 100%
-  );
-  backdrop-filter: blur(4px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: transparent;
+  /* 👆 totalmente transparente */
+  backdrop-filter: blur(0px);
+  box-shadow: none;
   z-index: 999;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-left {
@@ -84,16 +82,13 @@ body {
 /* === HERO PRINCIPAL === */
 .hero {
   position: relative;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../imagenes/hero.png") center/cover no-repeat;
-  height: 100vh;
+  background: none; /* Se usa el fondo global */
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 4rem;
   color: #fff;
-  background-attachment: fixed;
   overflow: hidden;
 }
 
@@ -148,7 +143,7 @@ body {
   }
 }
 
-/* === SECCIONES INTERNAS (Fondo Transparente con texto claro) === */
+/* === SECCIONES INTERNAS === */
 main {
   background: transparent;
   color: var(--texto);
@@ -185,7 +180,7 @@ main p {
 }
 
 .menu-item {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   text-align: center;
@@ -278,7 +273,7 @@ main p {
 
 /* === FOOTER === */
 .footer {
-  background-color: rgba(43, 29, 20, 0.9);
+  background-color: rgba(43, 29, 20, 0.8);
   color: var(--texto);
   text-align: center;
   padding: 1.5rem;
