@@ -1,4 +1,4 @@
-/* === EL DÚO PERFECTO | ESTILO PREMIUM (Ajustado sin humo y con header transparente global) === */
+/* === EL DÚO PERFECTO | ESTILO PREMIUM (Totalmente Transparente y con Fondo Global) === */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
 
@@ -15,7 +15,9 @@
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
-  background-color: var(--marron);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("../imagenes/hero.png") center/cover no-repeat fixed;
   color: var(--texto);
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -84,9 +86,8 @@ body {
   position: relative;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../imagenes/hero.png") center/105% no-repeat;
-  background-position: center 38%;
-  height: 90vh;
+    url("../imagenes/hero.png") center/cover no-repeat;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -94,18 +95,6 @@ body {
   color: #fff;
   background-attachment: fixed;
   overflow: hidden;
-}
-
-/* Degradado suave entre hero y el resto */
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background: linear-gradient(to bottom, rgba(43, 29, 20, 0), #f9f3e9);
-  pointer-events: none;
 }
 
 .hero-content {
@@ -159,17 +148,32 @@ body {
   }
 }
 
-/* === SECCIONES INTERNAS === */
+/* === SECCIONES INTERNAS (Fondo Transparente con texto claro) === */
 main {
-  background-color: var(--crema);
-  color: #2b1d14;
-  padding: 6rem 2rem 3rem;
+  background: transparent;
+  color: var(--texto);
+  padding: 8rem 2rem 4rem;
   min-height: 80vh;
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 
-h1, h2, h3 {
+main h2 {
   font-family: "Playfair Display", serif;
-  color: var(--marron);
+  color: var(--dorado);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  color: var(--texto);
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* === MENÚ === */
@@ -181,12 +185,13 @@ h1, h2, h3 {
 }
 
 .menu-item {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   text-align: center;
   transition: 0.3s;
   padding: 1rem;
+  backdrop-filter: blur(6px);
 }
 
 .menu-item:hover {
@@ -199,12 +204,12 @@ h1, h2, h3 {
 }
 
 .menu-item h3 {
-  color: var(--marron);
+  color: var(--dorado);
   margin-top: 0.8rem;
 }
 
 .menu-item p {
-  color: #5a4a3f;
+  color: #fffaf0;
 }
 
 .menu-item button {
@@ -223,11 +228,16 @@ h1, h2, h3 {
   background-color: var(--rojo-hover);
 }
 
-/* === PEDIDO === */
+/* === FORMULARIO PEDIDO === */
 .pedido {
-  background-color: var(--crema);
+  background: rgba(0, 0, 0, 0.4);
   padding: 2rem;
-  color: var(--marron);
+  color: var(--texto);
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 3rem auto;
+  text-align: center;
+  backdrop-filter: blur(6px);
 }
 
 #btnEnviar {
@@ -248,25 +258,27 @@ h1, h2, h3 {
 
 /* === CONTACTO === */
 .contacto {
-  background-color: var(--crema);
-  color: var(--marron);
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--texto);
   text-align: center;
   padding: 3rem 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
 }
 
 .contacto a {
-  color: var(--rojo);
+  color: var(--dorado);
   font-weight: 600;
   text-decoration: none;
 }
 
 .contacto a:hover {
-  color: var(--rojo-hover);
+  color: var(--rojo);
 }
 
 /* === FOOTER === */
 .footer {
-  background-color: rgba(43, 29, 20, 0.95);
+  background-color: rgba(43, 29, 20, 0.9);
   color: var(--texto);
   text-align: center;
   padding: 1.5rem;
