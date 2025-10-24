@@ -1,4 +1,4 @@
-/* === EL DÚO PERFECTO | ESTILO PREMIUM (Fondo Global + Header 100% Transparente) === */
+/* === EL DÚO PERFECTO | ESTILO PREMIUM (Fondo Global + Header 100% Transparente + Responsive) === */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap');
 
@@ -17,8 +17,7 @@ body {
   margin: 0;
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
-    url("../imagenes/hero.png") center/100% no-repeat fixed;
-  /* 👆 ahora la hamburguesa está un poquito más atrás sin mostrar bordes */
+    url("../imagenes/hero.png") center/95% no-repeat fixed;
   color: var(--texto);
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -169,6 +168,16 @@ main p {
   line-height: 1.6;
 }
 
+/* === PROMOS / IMÁGENES DE CONTENIDO === */
+.promos img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
 /* === MENÚ === */
 .menu-grid {
   display: grid;
@@ -194,6 +203,7 @@ main p {
 .menu-item img {
   width: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .menu-item h3 {
@@ -279,6 +289,33 @@ main p {
   border-top: 1px solid rgba(240, 199, 94, 0.3);
 }
 
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+    padding: 0 2rem;
+    justify-content: center;
+    text-align: center;
+  }
 
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 
+  .hero p {
+    font-size: 1rem;
+  }
 
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    height: 55px;
+    width: 55px;
+  }
+
+  .nav {
+    display: none; /* luego se puede convertir en menú hamburguesa si querés */
+  }
+}
