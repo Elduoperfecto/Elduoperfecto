@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú | El Dúo Perfecto</title>
+
+  <!-- Fuentes y estilos -->
   <link rel="stylesheet" href="css/style.css">
   <script src="js/pedido.js" defer></script>
 </head>
@@ -24,21 +26,22 @@
   </header>
 
   <!-- ======= CONTENIDO PRINCIPAL ======= -->
-  <main class="menu" style="display: flex; gap: 2rem; padding: 2rem;">
-    <!-- 🧆 LISTADO DE PRODUCTOS -->
-    <section class="productos" style="flex: 2;">
+  <main class="menu" style="padding: 2rem;">
+    <section class="productos">
       <h1>Nuestro Menú 🍔</h1>
       <div id="menuContainer" class="menu-grid"></div>
     </section>
-
-    <!-- 🛒 CARRITO LATERAL -->
-    <aside class="carrito" style="flex: 1; background: var(--marron); color: white; padding: 1rem; border-radius: 12px;">
-      <h2>Tu pedido</h2>
-      <div id="carrito"></div>
-      <hr>
-      <button id="btnHacerPedido" class="btn" style="width:100%;">Hacer pedido</button>
-    </aside>
   </main>
+
+  <!-- 🛒 BURBUJA DEL CARRITO -->
+  <div id="cart-bubble" class="cart-bubble">🛒<span id="cart-count" class="cart-count">0</span></div>
+
+  <!-- 📦 POPUP DEL CARRITO -->
+  <div id="cart-popup" class="cart-popup">
+    <h3>Tu pedido</h3>
+    <div id="carrito"></div>
+    <button id="btnHacerPedido" class="btn">Hacer pedido</button>
+  </div>
 
   <!-- 📦 MODAL DE DATOS DEL CLIENTE -->
   <div id="modalDatos" class="modal" style="display:none;">
