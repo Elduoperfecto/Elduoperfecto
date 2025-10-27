@@ -201,6 +201,28 @@ main h2 {
   color: var(--texto);
 }
 
+/* === BOTONES "AGREGAR" EN PROMOS === */
+.promo-card button {
+  margin-top: 0.8rem;
+  background: var(--dorado);
+  color: var(--marron);
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(240,199,94,0.3);
+  font-size: 0.95rem;
+}
+
+.promo-card button:hover {
+  background: var(--rojo);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(240,199,94,0.5);
+  transform: translateY(-2px) scale(1.05);
+}
+
 /* === MENÚ === */
 .menu-grid {
   display: grid;
@@ -393,7 +415,44 @@ main h2 {
 
   .promos { grid-template-columns: 1fr; gap: 1.5rem; }
 
-  .cart-bubble { width: 55px; height: 55px; font-size: 1.3rem; }
+  /* === FIX CARRITO EN CELULAR === */
+  .cart-bubble {
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    z-index: 4000;
+  }
 
-  .cart-panel { width: 90%; padding: 1.5rem; }
+  .cart-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+  }
+
+  .cart-overlay.visible {
+    display: flex !important;
+    animation: fadeIn 0.4s ease forwards;
+  }
+
+  .cart-panel {
+    width: 90%;
+    max-width: 400px;
+    padding: 1.8rem;
+    border-radius: 20px;
+    background: rgba(43, 29, 20, 0.96);
+    box-shadow: 0 0 25px rgba(240,199,94,0.3);
+  }
+
+  .cerrar {
+    top: 8px;
+    right: 12px;
+    font-size: 1.5rem;
+  }
 }
