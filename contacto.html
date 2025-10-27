@@ -5,12 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | El Dúo Perfecto</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* === ESTILO DE CONTACTO === */
+    .contacto {
+      text-align: left;
+      max-width: 800px;
+      margin: 8rem auto 4rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(240,199,94,0.25);
+      color: var(--texto);
+      line-height: 1.8;
+      backdrop-filter: blur(6px);
+    }
+
+    .contacto h1 {
+      text-align: center;
+      color: var(--dorado);
+      font-family: "Playfair Display", serif;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px rgba(240,199,94,0.3);
+    }
+
+    .contacto p {
+      font-size: 1.1rem;
+      margin: 0.8rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .contacto a {
+      color: var(--dorado);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contacto a:hover {
+      color: var(--rojo);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .contacto {
+        margin: 7rem 1rem 3rem;
+        padding: 1.5rem;
+      }
+
+      .contacto h1 {
+        font-size: 1.8rem;
+      }
+
+      .contacto p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header">
     <div class="header-left">
       <img src="imagenes/logotipo.jpeg" alt="El Dúo Perfecto" class="logo" />
       <h2 class="brand-name">El Dúo Perfecto</h2>
+    </div>
     <nav class="nav">
       <a href="index.html">Inicio</a>
       <a href="menu.html">Menú</a>
@@ -18,11 +77,12 @@
       <a href="contacto.html" class="active">Contacto</a>
     </nav>
   </header>
+
   <main class="contacto">
     <h1>Contacto</h1>
-    <p>📍 Dirección: Av. Principal 123, Santa Cruz, Bolivia</p>
-    <p>📞 Teléfono / WhatsApp: <a href="https://wa.me/59163430571" target="_blank">+591 63430571</a></p>
-    <p>🕒 Horarios: Lunes a Domingo 12:00 - 23:00</p>
+    <p>📍 <strong>Dirección:</strong> Av. Principal 123, Santa Cruz, Bolivia</p>
+    <p>📞 <strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/59163430571" target="_blank">+591 63430571</a></p>
+    <p>🕒 <strong>Horarios:</strong> Lunes a Domingo 12:00 – 23:00</p>
   </main>
 </body>
 </html>
