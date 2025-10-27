@@ -7,11 +7,13 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/pedido.js" defer></script>
 </head>
+
 <body>
   <header class="header">
     <div class="header-left">
       <img src="imagenes/logotipo.jpeg" alt="El Dúo Perfecto" class="logo" />
       <h2 class="brand-name">El Dúo Perfecto</h2>
+    </div>
     <nav class="nav">
       <a href="index.html">Inicio</a>
       <a href="menu.html">Menú</a>
@@ -21,26 +23,36 @@
     </nav>
   </header>
 
-  <main class="pedido">
+  <main class="pedido" style="text-align:center; padding:2rem;">
     <h1>Tu Pedido</h1>
-    <div id="carrito"></div>
 
-    <div class="opciones-envio">
-      <label><input type="radio" name="tipo" value="retiro" checked> Retiro en local</label>
-      <label><input type="radio" name="tipo" value="envio"> Envío a domicilio</label>
-    </div>
+    <!-- 🛒 CARRITO -->
+    <section id="seccionCarrito">
+      <div id="carrito"></div>
+      <button id="btnHacerPedido" class="btn">Hacer pedido</button>
+    </section>
 
-    <div id="formEnvio" style="display:none;">
-      <input id="nombre" placeholder="Nombre completo">
-      <input id="direccion" placeholder="Dirección de entrega">
-      <select id="metodo">
-        <option value="Efectivo">Efectivo</option>
-        <option value="Transferencia">Transferencia</option>
-      </select>
-      <textarea id="observaciones" placeholder="Observaciones"></textarea>
-    </div>
+    <!-- 📦 DATOS CLIENTE -->
+    <section id="seccionDatos" style="display:none;">
+      <h2>Datos del Pedido</h2>
 
-    <button id="btnEnviar">Enviar pedido por WhatsApp</button>
+      <div class="opciones-envio">
+        <label><input type="radio" name="tipo" value="retiro"> Retiro en local</label>
+        <label><input type="radio" name="tipo" value="envio"> Envío a domicilio</label>
+      </div>
+
+      <div id="formEnvio" style="display:none;">
+        <input id="nombre" placeholder="Nombre completo">
+        <input id="direccion" placeholder="Dirección de entrega">
+        <select id="metodo">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Transferencia">Transferencia</option>
+        </select>
+        <textarea id="observaciones" placeholder="Observaciones (opcional)"></textarea>
+      </div>
+
+      <button id="btnEnviar" class="btn">Enviar pedido por WhatsApp</button>
+    </section>
   </main>
 </body>
 </html>
