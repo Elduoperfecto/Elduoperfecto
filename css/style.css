@@ -456,3 +456,18 @@ main h2 {
     font-size: 1.5rem;
   }
 }
+
+/* === AJUSTES HEADER SOLO EN ESCRITORIO === */
+@media (min-width: 769px) {
+  /* Header completamente transparente */
+  .header {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Corrección de posición del menú (Inicio / Menú / Promos / Contacto) */
+  .nav {
+    transform: translateX(-25px); /* corre el menú un poco a la izquierda */
+  }
+}
