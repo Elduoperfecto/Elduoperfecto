@@ -93,7 +93,7 @@ body {
   padding: 0 2rem;
   color: #fff;
   overflow: hidden;
-  background: transparent; /* usa el fondo del body */
+  background: transparent;
 }
 
 .hero-content {
@@ -274,13 +274,89 @@ main p {
   border-top: 1px solid rgba(240, 199, 94, 0.3);
 }
 
+/* === 🛒 CARRITO FLOTANTE === */
+.cart-bubble {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--dorado);
+  color: var(--marron);
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+.cart-bubble:hover {
+  transform: scale(1.1);
+}
+
+/* Contador del carrito */
+.cart-count {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  background: var(--rojo);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === 📦 POPUP DEL CARRITO === */
+.cart-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 260px;
+  background: var(--marron);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0,0,0,0.4);
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+.cart-popup h3 {
+  margin-top: 0;
+  color: var(--dorado);
+  text-align: center;
+}
+.cart-popup p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+.cart-popup strong {
+  display: block;
+  margin-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 5px;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   body {
     background:
       linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
       url("../imagenes/hero.png") center/cover no-repeat;
-    background-attachment: scroll; /* evita zoom del pan en celular */
+    background-attachment: scroll;
     background-position: center top;
   }
 
@@ -316,7 +392,6 @@ main p {
     font-size: 1rem;
   }
 
-  /* === PROMOS MOBILE === */
   .promos {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -347,5 +422,19 @@ main p {
   .promo-content p {
     font-size: 0.95rem;
     line-height: 1.4;
+  }
+
+  /* 🛒 Ajustes para el carrito móvil */
+  .cart-bubble {
+    width: 55px;
+    height: 55px;
+    font-size: 1.3rem;
+  }
+
+  .cart-popup {
+    right: 10px;
+    bottom: 90px;
+    width: 90%;
+    max-width: 300px;
   }
 }
