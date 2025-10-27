@@ -5,17 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Promos | El Dúo Perfecto</title>
 
-  <!-- 🔤 Fuentes y estilos -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
   <script src="js/pedido.js" defer></script>
 </head>
 
 <body>
-  <!-- ================= HEADER ================= -->
+  <!-- ======= HEADER ======= -->
   <header class="header">
     <div class="header-left">
       <img src="imagenes/logotipo.jpeg" alt="El Dúo Perfecto" class="logo" />
@@ -29,14 +24,14 @@
     </nav>
   </header>
 
-  <!-- ================= MAIN ================= -->
-  <main style="display: flex; gap: 2rem; padding: 2rem;">
-    <!-- 🧨 PROMOS -->
-    <section class="promos" style="flex: 2;">
-      <h1 style="text-align: center; color: var(--dorado); margin-bottom: 2rem;">
-        Promociones Especiales 🍔
-      </h1>
+  <!-- ======= CONTENIDO PRINCIPAL ======= -->
+  <main class="promos" style="padding: 8rem 2rem 4rem;">
+    <h1 style="text-align:center; color: var(--dorado); margin-bottom:2rem;">
+      Promociones Especiales 🍔
+    </h1>
 
+    <section class="promos">
+      <!-- PROMO 1 -->
       <div class="promo-card">
         <img src="imagenes/promo.jpg" alt="Promo especial" />
         <div class="promo-content">
@@ -45,31 +40,34 @@
             Dos hamburguesas premium, papas doradas y bebida a elección —
             <strong>$19.99</strong>.
           </p>
-          <button onclick="agregarAlPedido('Combo Dúo Perfecto', 19900)">Agregar</button>
+          <button onclick="agregarAlPedido('Combo Dúo Perfecto', 19.99)">Agregar</button>
         </div>
       </div>
 
+      <!-- PROMO 2 -->
       <div class="promo-card">
         <img src="imagenes/promo2.jpg" alt="Promo especial 2" />
         <div class="promo-content">
           <h3>Combo Familiar</h3>
           <p>
             Cuatro burgers, papas grandes y bebidas —
-            <strong>$34.99</strong>.
+            <strong>$34.99</strong>. Ideal para compartir.
           </p>
-          <button onclick="agregarAlPedido('Combo Familiar', 34900)">Agregar</button>
+          <button onclick="agregarAlPedido('Combo Familiar', 34.99)">Agregar</button>
         </div>
       </div>
     </section>
-
-    <!-- 🛒 CARRITO LATERAL -->
-    <aside class="carrito" style="flex: 1; background: var(--marron); color: white; padding: 1rem; border-radius: 12px;">
-      <h2>Tu pedido</h2>
-      <div id="carrito"></div>
-      <hr>
-      <button id="btnHacerPedido" class="btn" style="width:100%;">Hacer pedido</button>
-    </aside>
   </main>
+
+  <!-- 🛒 BURBUJA DEL CARRITO -->
+  <div id="cart-bubble" class="cart-bubble">🛒<span id="cart-count" class="cart-count">0</span></div>
+
+  <!-- 📦 POPUP DEL CARRITO -->
+  <div id="cart-popup" class="cart-popup">
+    <h3>Tu pedido</h3>
+    <div id="carrito"></div>
+    <button id="btnHacerPedido" class="btn">Hacer pedido</button>
+  </div>
 
   <!-- 📦 MODAL DE DATOS -->
   <div id="modalDatos" class="modal" style="display:none;">
@@ -80,7 +78,7 @@
 
       <div id="formEnvio" style="display:none; margin-top:10px;">
         <input id="nombre" placeholder="Nombre completo" class="input">
-        <input id="direccion" placeholder="Dirección de entrega" class="input">
+        <input id="direccion" placeholder="Dirección" class="input">
         <select id="metodo" class="input">
           <option value="Efectivo">Efectivo</option>
           <option value="Transferencia">Transferencia</option>
@@ -93,7 +91,7 @@
     </div>
   </div>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- ======= FOOTER ======= -->
   <footer class="footer">
     <p>© 2025 El Dúo Perfecto. Todos los derechos reservados.</p>
   </footer>
