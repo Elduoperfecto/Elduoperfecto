@@ -5,25 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú | El Dúo Perfecto</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <script src="js/pedido.js" defer></script>
 </head>
+
 <body>
- <header class="header">
+  <!-- ======= HEADER ======= -->
+  <header class="header">
     <div class="header-left">
       <img src="imagenes/logotipo.jpeg" alt="El Dúo Perfecto" class="logo" />
       <h2 class="brand-name">El Dúo Perfecto</h2>
+    </div>
     <nav class="nav">
       <a href="index.html">Inicio</a>
       <a href="menu.html" class="active">Menú</a>
       <a href="promos.html">Promos</a>
-      <a href="pedido.html">Pedido</a>
       <a href="contacto.html">Contacto</a>
     </nav>
   </header>
-  <main class="menu">
-    <h1>Nuestro Menú</h1>
-    <div id="menuContainer" class="menu-grid"></div>
+
+  <!-- ======= CONTENIDO PRINCIPAL ======= -->
+  <main class="menu" style="display: flex; gap: 2rem; padding: 2rem;">
+    <!-- 🧆 LISTADO DE PRODUCTOS -->
+    <section class="productos" style="flex: 2;">
+      <h1>Nuestro Menú 🍔</h1>
+      <div id="menuContainer" class="menu-grid"></div>
+    </section>
+
+    <!-- 🛒 CARRITO LATERAL -->
+    <aside class="carrito" style="flex: 1; background: var(--marron); color: white; padding: 1rem; border-radius: 12px;">
+      <h2>Tu pedido</h2>
+      <div id="carrito"></div>
+      <hr>
+      <button id="btnHacerPedido" class="btn" style="width:100%;">Hacer pedido</button>
+    </aside>
   </main>
+
+  <!-- 📦 MODAL DE DATOS DEL CLIENTE -->
+  <div id="modalDatos" class="modal" style="display:none;">
+    <div class="modal-content" style="background:white; color:black; padding:2rem; border-radius:10px; max-width:400px; margin:auto;">
+      <h2>Datos del Pedido</h2>
+      <label><input type="radio" name="tipo" value="retiro"> Retiro en local</label>
+      <label><input type="radio" name="tipo" value="envio"> Envío a domicilio</label>
+
+      <div id="formEnvio" style="display:none; margin-top:10px;">
+        <input id="nombre" placeholder="Nombre completo" class="input">
+        <input id="direccion" placeholder="Dirección" class="input">
+        <select id="metodo" class="input">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Transferencia">Transferencia</option>
+        </select>
+        <textarea id="observaciones" placeholder="Observaciones (opcional)" class="input"></textarea>
+      </div>
+
+      <button id="btnEnviar" class="btn" style="margin-top:1rem;">Enviar por WhatsApp</button>
+      <button id="cerrarModal" class="btn-secundario" style="margin-top:0.5rem;">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- ======= SCRIPT DE PRODUCTOS ======= -->
   <script>
     fetch('data/productos.json')
       .then(res => res.json())
