@@ -16,6 +16,22 @@
   />
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/main.js" defer></script>
+
+  <!-- 👇 NUEVO: Manifest y configuración de color -->
+  <link rel="manifest" href="manifest/manifest.json" />
+  <meta name="theme-color" content="#d99100" />
+
+  <!-- 👇 NUEVO: Registro del Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(() => console.log("✅ Service Worker registrado correctamente."))
+          .catch((err) => console.log("❌ Error al registrar el Service Worker:", err));
+      });
+    }
+  </script>
 </head>
 
 <body>
