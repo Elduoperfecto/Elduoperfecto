@@ -1,0 +1,21 @@
+{
+  "name": "El Dúo Perfecto",
+  "short_name": "Dúo Perfecto",
+  "description": "Pedidos rápidos y promociones del Dúo Perfecto 🍔",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#d99100",
+  "icons": [
+    {
+      "src": "imagenes/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "imagenes/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
